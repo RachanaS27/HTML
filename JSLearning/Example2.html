@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        myName=window.prompt("Enter your name");
+        window.alert("Welcome to JS, "+myName);
+        myconsent=window.confirm("Are you sure to delete?");
+        alert(myconsent);
+
+        var a;
+        a=10;
+        b=20;
+        window.alert(a+b);
+
+        c="50";
+        d=window.parseInt(c);
+        window.alert("addition of a,b and c "+(a+b+c));
+        window.alert("addition of a,b and d "+(a+b+d));
+        window.alert("value of d "+(d));
+        window.alert("pre increment "+(++d));
+        window.alert("post increment "+(d++));
+        d=50;
+        window.alert("pre decrement "+(--d));
+        window.alert("post decrement "+(d--));
+
+        e="45.9";
+        f=window.parseFloat(e);
+        window.alert("string to float "+f);
+
+        g="56.98u";
+        h=window.parseFloat("string to float with char at end "+g);
+
+        i="dgh78.903";
+        j=window.parseFloat(i);
+        if(window.isNaN(j))
+        {
+            alert("convertion data contains illegal characters");
+        }else{
+        window.alert(j);
+        }
+
+
+    </script>
+</body>
+</html>

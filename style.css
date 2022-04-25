@@ -1,0 +1,52 @@
+h1 {
+    color: grey;
+    width: 80%;
+    height: 3cm;
+    background-color: burlywood;
+}
+
+.important {
+    background-color: black;
+    color: white;
+}
+
+#p3 {
+    background-color: palegoldenrod;
+    color: blue;
+}
+
+p[align='center'] {
+    font-style: italic;
+}
+
+input[type='button'] {
+    width: 2.5cm;
+    height: 1cm;
+    background-color: lightblue;
+    color: darkblue;
+}
+
+input[type='submit'] {
+    background-color: green;
+}
+
+input[type='reset'] {
+    background-color: red;
+}
+
+h2 {
+    color: white;
+}
+
+table{
+    padding: 1%;
+}
+
+
+body {
+    background-image: url("CSSLearning/positionDemo/images/officeImg.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+
+   }

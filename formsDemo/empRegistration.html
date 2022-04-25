@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+    <form action="success.html">
+       
+        <table  frame="box" align="center" bgcolor="lightblue" width = 600>
+            <tr bgcolor="blue">
+                <td colspan="2" align="center"><h2>Employee Registration form</h2></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center"><h3>Personal Details</h3> <hr></td>
+               
+            </tr>
+            <tr>
+                <td><label for="">Employee Id<span style="color: red;">*</span></label></td>
+                <td><input type="text" name="id" id="" required></td>
+            </tr>
+            <tr>
+                <td><label for="">Employee Name<span style="color: red;">*</span></label></td>
+                <td><input type="text" name="name" id="" required></td>
+            </tr>
+            <tr>
+                <td><label for="">Date of Birth</label></td>
+                <td><input type="date" name="dob" id=""></td>
+            </tr>
+            <tr>
+                <td><label for="">Gender</label></td>
+                <td colspan="2"><input type="radio" name="gender" id="" checked="checked">Male
+                <input type="radio" name="gender" id="">Female</td>
+            </tr>
+            <tr>
+                <td><label for="">Address</label></td>
+                <td><textarea name="address" id="" cols="30" rows="10"></textarea></td>
+            </tr>
+            <tr>
+                <td><label for="">Phone number<span style="color: red;">*</span></label></td>
+                <td><input type="number" name="ph_no" id="" required></td>
+            </tr>
+            <tr>
+                <td><label for="">Email Id<span style="color: red;">*</span></label></td>
+                <td><input type="email" name="email" id="" required></td>
+            </tr>
+            <tr>
+                <td><label for="">Address Proof<span style="color: red;">*</span></label></td>
+                <td><select name="Proof" id="" required>
+                    <option value="0"></option>
+                    <option value="1">Aadhar card</option>
+                    <option value="2">Pan card</option>
+                    <option value="3">Passport</option>
+                    <option value="4">Voter Id card</option>
+                </select>
+            </td>
+            </tr>
+            <tr>
+                <td><label for="">Upload Selected Address proof</label></td>
+                <td><input type="file" name="addr_proof" id=""></td>
+            </tr>
+            <tr>
+                <td><label for="">Upload Passport size Photo</label></td>
+                <td><input type="file" name="photo" id="" ></td>
+            </tr>
+            <tr>
+                
+                <td colspan="2" align="center"><hr><h3>Company Details</h3> <hr></td>
+               
+            </tr>
+            <tr>
+                <td><label for="">Company name<span style="color: red;">*</span></label></td>
+                <td><input type="text" name="Company" id="" required></td>
+            </tr>
+            <tr>
+                <td><label for="">UserName<span style="color: red;">*</span></label></td>
+                <td><input type="text" name="userName" id="" required></td>
+            </tr>
+            <tr>
+                <td><label for="">Password<span style="color: red;">*</span></label></td>
+                <td><input type="password" name="pass" id="" required></td>
+            </tr>
+            <tr>
+                <td><label for="">Date of join<span style="color: red;">*</span></label></td>
+                <td><input type="date" name="doj" id="" required></td>
+            </tr>
+            <tr>
+                <td><label for="">Designation</label></td>
+                <td><input type="text" name="role"></td>
+            </tr>
+            <tr>
+                <td><p>Technical Skills</p></td>
+                <td colspan="2">
+                    <input type="checkbox">Java
+                    <input type="checkbox">MySQL
+                    <input type="checkbox">Python
+                    <input type="checkbox">C++
+                </td>
+            </tr>
+            <tr>
+                <td><label for="">Salary</label></td>
+                <td><input type="number" name="salary"></td>
+            </tr>
+            <tr>
+                <td><label for="">Select Location<span style="color: red;">*</span></label></td>
+                <td><select name="Proof" id="" required>
+                    <option value="0"></option>
+                    <option value="1">Bangalore</option>
+                    <option value="2">Mumbai</option>
+                    <option value="3">Pune</option>
+                    <option value="4">Kolkata</option>
+                </select>
+            </td>
+            </tr>
+            <tr>
+                <td><label for="">Upload Resume</label></td>
+                <td><input type="file" name="resume" id="" ></td>
+            </tr>
+            <tr><td colspan="2"><br></td></tr>
+            <tr align="center">
+                <td><input type="submit" value="Submit"></td>
+                <td><input type="reset" value="CANCEL"></td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var a, b, n1, n2, r1, r2, r3, r4, test;
+      
+      test = true;
+      
+      while (test) {
+        a = window.prompt("Enter number 1 ");
+        n1 = window.parseInt(a);
+        if (window.isNaN(n1)) {
+          alert("please enter valid number");
+        } else {
+          test = false;
+        }
+      }
+      
+      test = true;
+      
+      while (test) {
+        b = window.prompt("Enter number 2 ");
+        n2 = window.parseInt(b);
+        if (window.isNaN(n2)) {
+          alert("please enter valid number");
+        } else {
+          test = false;
+        }
+      }
+
+      r1 = n1 + n2;
+      r2 = n1 - n2;
+      r3 = n1 * n2;
+      r4 = n1 / n2;
+      alert("addition of " + n1 + " and " + n2 + " is " + r1);
+      alert("subtraction of " + n1 + " and " + n2 + " is " + r2);
+      alert("multiplication of " + n1 + " and " + n2 + " is " + r3);
+      alert("division of " + n1 + " and " + n2 + " is " + r4);
+    </script>
+  </body>
+</html>

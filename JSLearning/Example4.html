@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      test = true;
+      test1 = true;
+      var allowance;
+      employeeName = window.prompt("Enter employee name ");
+
+      while (test) {
+        grade = window.prompt("Enter employee grade ");
+        if (grade == "A" || grade == "B" || grade == "C") {
+          while (test1) {
+            basicSalary = window.prompt("Enter the salary ");
+            salary = window.parseFloat(basicSalary);
+            if (window.isNaN(salary)) {
+              window.alert("Enter valid salary ");
+            } else {
+              test1 = false;
+            }
+          }
+
+          if (grade == "A") {
+            allowance = basicSalary * (35 / 100);
+            window.alert(
+              "Employee name : " +
+                employeeName +
+                "\n grade : " +
+                grade +
+                "\n basic Salary : " +
+                basicSalary +
+                "\n Allowance : " +
+                allowance
+            );
+          } else if (grade == "B") {
+            allowance = basicSalary * (25 / 100);
+            window.alert(
+                "Employee name : " +
+                employeeName +
+                "\n grade : " +
+                grade +
+                "\n basic Salary : " +
+                basicSalary +
+                "\n Allowance : " +
+                allowance
+            );
+          } else {
+            allowance = basicSalary * (10 / 100);
+            window.alert(
+                "Employee name : " +
+                employeeName +
+                "\n grade : " +
+                grade +
+                "\n basic Salary : " +
+                basicSalary +
+                "\n Allowance : " +
+                allowance
+            );
+          }
+          test = false;
+        } else {
+          alert("enter valid grade ");
+        }
+      }
+    </script>
+  </body>
+</html>
