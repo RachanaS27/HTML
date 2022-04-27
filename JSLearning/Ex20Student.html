@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="Student.js"></script>
+    <script>
+        function doController(){
+            var rollInp=document.studInpForm.rollNumInput.value;
+            var nameInp=document.studInpForm.nameInput.value;
+            var mark1Inp=document.studInpForm.mark1Input.value;
+            var mark2Inp=document.studInpForm.mark2Input.value;
+            var mark3Inp=document.studInpForm.mark3Input.value;
+
+            var rollNum = window.parseInt(rollInp);
+            var mark1 = window.parseInt(mark1Inp);
+            var mark2 = window.parseInt(mark2Inp);
+            var mark3 = window.parseInt(mark3Inp);
+
+            
+            var stud = new Student(rollNum,nameInp,mark1,mark2,mark3);
+            
+            document.getElementById("totalMarkOutput").innerText=stud.computeTotal();
+            document.getElementById("averageOutput").innerText=stud.computeAverage();
+            document.getElementById("gradeOutput").innerText=stud.computeGrade();
+
+        }
+    </script>
+</head>
+<body>
+    <form name="studInpForm">
+        <table>
+            <tr>
+                <td><label for="">Roll Number</label></td>
+                <td><input type="text" name="rollNumInput"></td>
+            </tr>
+            <tr>
+                <td><label for="">Name</label></td>
+                <td><input type="text" name="nameInput"></td>
+            </tr>
+            <tr>
+                <td><label for="">Mark1</label></td>
+                <td><input type="text" name="mark1Input"></td>
+            </tr>
+            <tr>
+                <td><label for="">Mark2</label></td>
+                <td><input type="text" name="mark2Input"></td>
+            </tr>
+            <tr>
+                <td><label for="">Mark3</label></td>
+                <td><input type="text" name="mark3Input"></td>
+            </tr>
+            <tr>
+                <td colspan="2"><input type="button" value="Calculate" onclick="doController()"></td>
+            </tr>
+        </table>
+    </form>
+    <form name="studOutForm">
+        <table>
+            <tr>
+                <td>Total marks</td>
+                <td id="totalMarkOutput"></td>
+            </tr>
+            <tr>
+                <td>Average marks</td>
+                <td id="averageOutput"></td>
+            </tr>
+            <tr>
+                <td>Grade</td>
+                <td id="gradeOutput"></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function doSomething(a){
+            if(typeof a=="number"){
+                alert(a)
+            }
+            if(typeof a =="function"){
+            a();
+            }
+        }
+
+        function welcome(){
+            alert("Welcome to JS")
+        }
+
+        var greet=function(){
+            alert("Hello, How are you?")
+        }
+    </script>
+</head>
+<body>
+    <script>
+        var x=1000;
+        alert(typeof x);
+        doSomething(x);
+
+        doSomething(greet);
+
+
+    </script>
+</body>
+</html>

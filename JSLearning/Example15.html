@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function Student(a,b,c,d,e){
+            this.rollNum=a;
+            this.name=b;
+            this.mark1=c;
+            this.mark2=d;
+            this.mark3=e;
+
+            this.computeTotal=function(){
+                return this.mark1+this.mark2+this.mark3;
+            }
+
+            this.computeAverage=function(){
+                return ((this.mark1+this.mark2+this.mark3)/3)
+            }
+        }
+    </script>
+</head>
+<body>
+    <script>
+        var stud=new Student(1,"Abi",95,90,92);
+        console.log(stud.rollNum)
+        console.log(stud.name)
+        console.log(stud.mark1)
+        console.log(stud.mark2)
+        console.log(stud.mark3)
+        console.log(stud.computeTotal())
+        console.log(stud.computeAverage())
+
+        console.log(stud["rollNum"])
+        console.log(stud["name"])
+        console.log(stud["mark1"])
+        console.log(stud["mark2"])
+        console.log(stud["mark3"])
+        console.log(stud["computeTotal"]())
+        console.log(stud["computeAverage"]())
+    </script>
+</body>
+</html>

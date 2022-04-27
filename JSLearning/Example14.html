@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function Employee(a,b,c){
+            this.id=a;
+            this.name=b;
+            this.basic=c;
+
+            this.computeAllowance=function(){
+                return this.basic*0.35;
+            }
+            this.computeTax=function(){
+                return this.basic*0.10;
+            }
+        }
+    </script>
+</head>
+<body>
+    <script>
+        var e1=new Employee(101,"Ram",40000.00);
+        console.log(e1.id)
+        console.log(e1.name)
+        console.log(e1.basic)
+        console.log(e1.computeAllowance())
+        console.log(e1.computeTax())
+
+        console.log(e1["id"])
+        console.log(e1["name"])
+        console.log(e1["basic"])
+        console.log(e1["computeAllowance"]())
+        console.log(e1["computeTax"]())
+    </script>
+</body>
+</html>

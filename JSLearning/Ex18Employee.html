@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="Employee.js"></script>
+    <script>
+        function doController(){
+            var idInp=document.empInpForm.idInput.value;
+            var nameInp=document.empInpForm.nameInput.value;
+            var gradeInp=document.empInpForm.gradeInput.value;
+            var basicSalaryInp=document.empInpForm.basicInput.value;
+
+            var id = window.parseInt(idInp);
+            var basic = window.parseFloat(basicSalaryInp);
+            
+            var emp = new Employee(id,nameInp,gradeInp,basic);
+            
+            document.empOutForm.allowanceOutput.value=emp.computeAllowance();
+            document.empOutForm.taxOutput.value=emp.computeTax();
+            document.empOutForm.netSalaryOutput.value=emp.computeNetSalary();
+        }
+    </script>
+</head>
+<body>
+    <form name="empInpForm">
+        <table>
+            <tr>
+                <td><label for="">EmpId</label></td>
+                <td><input type="text" name="idInput"></td>
+            </tr>
+            <tr>
+                <td><label for="">Name</label></td>
+                <td><input type="text" name="nameInput"></td>
+            </tr>
+            <tr>
+                <td><label for="">Grade</label></td>
+                <td><input type="text" name="gradeInput"></td>
+            </tr>
+            <tr>
+                <td><label for="">BasicSalary</label></td>
+                <td><input type="text" name="basicInput"></td>
+            </tr>
+            <tr>
+                <td colspan="2"><input type="button" value="Calculate" onclick="doController()"></td>
+            </tr>
+        </table>
+    </form>
+    <form name="empOutForm">
+        <table>
+            <tr>
+                <td>Allowance</td>
+                <td><input type="text" name="allowanceOutput"></td>
+            </tr>
+            <tr>
+                <td>Tax</td>
+                <td><input type="text" name="taxOutput"></td>
+            </tr>
+            <tr>
+                <td>Net Salary</td>
+                <td><input type="text" name="netSalaryOutput"></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

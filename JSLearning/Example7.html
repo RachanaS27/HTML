@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function f1(a,b,c){
+            return a+b+c;
+        }
+        function f2(){
+            for (index = 0; index < arguments.length; index++) {
+              console.log(arguments[index])
+            }
+        }
+        function f3(){
+            sum = 0;
+            for (index = 0; index < arguments.length; index++) {
+                sum = sum+ arguments[index];  
+            }
+            alert("Sum of numbers is "+sum)
+        }
+    </script>
+</head>
+<body>
+    <script>
+        alert(f1(10,20,30));
+        alert(f1(10,20));
+
+        a=50;
+        f2(4,5,6,7,"and",true,3.9,4,a,1,2)
+
+        f3(1,2,3);
+        f3();
+        f3(10,20,30,40,50);
+    </script>
+</body>
+</html>
