@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.css" />
+    <script src="bootstrap-5.0.2-dist/js/bootstrap.js"></script>
+    <script src="Employee.js"></script>
+    <script src="EmployeeManagement.js"></script>
+
+    <script>
+        var management=new EmployeeManagement()
+        function f1(){
+            var nameStr=window.document.forms[0].elements[0].value;
+            var gradeStr=window.document.forms[0].elements[1].value;
+            var basicStr=window.document.forms[0].elements[2].value;
+            var basic=window.parseFloat(basicStr);
+
+            var employee = new Employee(nameStr,gradeStr,basic);
+            management.addEmployee(employee);
+        }
+
+        function f3(){
+            alert("It is working.....")
+        }
+
+      
+        function updatedEmployeeDataUI(){
+            var rowId=0;
+            var empList=management.getAllEmployees();
+            
+            for(i=0;i<empList.length;i++){
+                var rowIdStr="r"+(++rowId);
+                var currentRow = document.getElementById(rowIdStr);
+                var tdList=currentRow.getElementsByTagName("td");
+                tdList[0].innerText=empList[i].id;
+                tdList[1].innerText=empList[i].name;
+                tdList[2].innerText=empList[i].grade;
+                tdList[3].innerText=empList[i].basic;
+                tdList[4].innerText=empList[i].computeAllowance();
+                tdList[5].innerText=empList[i].computeNet();
+            }
+
+            var deleteButtonElement=document.createElement("button");
+            var textNode=document.createTextNode("DELETE");
+            deleteButtonElement.appendChild(textNode);
+            tdList[6].appendChild(deleteButtonElement);
+
+            deleteButtonElement.addEventListener("click",f3,true)
+        }
+        
+    </script>
+    <style>
+      td {
+        height: 1cm;
+      }
+      form {
+        margin: 1cm;
+        padding: 1cm;
+        border: solid thick black;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-10">
+          <div class="container-fluid">
+            <form class="form-inline" onsubmit="return false">
+              <div class="form-group">
+                <label>Name</label>
+                <input type="text" class="form-control" />
+              </div>
+              <div class="form-group">
+                <label>Grade</label>
+                <input type="text" class="form-control" />
+              </div>
+              <div class="form-group">
+                <label>Basic Salary</label>
+                <input type="text" class="form-control" />
+              </div>
+              <div class="form-group">
+                <button class="btn btn-primary" onclick="f1();updatedEmployeeDataUI()">ADD</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <table class="table table-bordered table-striped" id="empOutTable">
+          <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Grade</th>
+            <th>Basic Salary</th>
+            <th>Allowance</th>
+            <th>Net Salary</th>
+            <th>Delete ?</th>
+          </tr>
+          <tr id="r1">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr id="r2">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr id="r3">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr id="r4">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr id="r5">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr id="r6">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr id="r7">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr id="r8">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr id="r9">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr id="r10">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>
