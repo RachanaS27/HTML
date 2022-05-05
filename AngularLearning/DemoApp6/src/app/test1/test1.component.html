@@ -1,0 +1,28 @@
+<p>test1 works!</p>
+<input #inp />
+<button (click)="printText(inp.value)">Print</button>
+
+<input #inp1 />
+<button (click)="printNumber(inp1.value)">Age</button>
+
+<p #para1>
+  I learn Web technologies.I learn Web technologies.I learn Web technologies.I
+  learn Web technologies.I learn Web technologies.I learn Web technologies.I
+  learn Web technologies.I learn Web technologies.I learn Web technologies.I
+  learn Web technologies.I learn Web technologies.
+</p>
+
+<button (click)="printPara(para1.innerText)">Print</button>
+<button (click)="printPara(para1)">PrintParaEle</button>
+
+<table>
+    <tr>
+        <td (click)="printId(id.innerText)">Id</td>
+        <td (click)="printId(name.innerText)">Name</td>
+    </tr>
+    <tr>
+        <td #id>1022</td>
+        <td #name>Divya</td>
+    </tr>
+</table>
+

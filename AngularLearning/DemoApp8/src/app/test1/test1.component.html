@@ -1,0 +1,29 @@
+<p>test1 works!</p>
+
+<h1 *ngIf="displayMessage">Hello Angular</h1>
+
+<h1 *ngIf="displayMessage; else elseBlock">Hello Angular 2</h1>
+
+<ng-template #elseBlock>
+    <h2>
+        Message is Hidden
+    </h2>
+</ng-template>
+
+<input type="checkbox" [(ngModel)]="displayMessage">Show Message
+
+
+
+<h1 *ngIf="displayName; then thenBlock; else elseBlock1"></h1>
+
+<ng-template #thenBlock>
+    <h1>Hello Angular in then block</h1>
+</ng-template>
+<ng-template #elseBlock1>
+    <h2>
+        Message is Hidden
+    </h2>
+</ng-template>
+
+<input type="checkbox" [(ngModel)]="displayName">Show Name
+

@@ -1,0 +1,33 @@
+<p>test works!</p>
+
+<form #studentForm="ngForm">
+
+    {{studentForm.value|json}}
+    <br>
+    {{student|json}}
+    <table>
+        <tr>
+            <td><label>Roll Number</label></td>
+            <td><input type="text" [(ngModel)]="student.rollNo" name="rollnum"></td>
+        </tr>
+        <tr>
+            <td><label>Name</label></td>
+            <td><input type="text" [(ngModel)]="student.name" name="txtName"></td>
+        </tr>
+        <tr>
+            <td><label>Mark1</label></td>
+            <td><input type="number" [(ngModel)]="student.mark1" name="txtmark1"></td>
+        </tr>
+        <tr>
+            <td><label>Mark2</label></td>
+            <td><input type="number" [(ngModel)]="student.mark2" name="txtmark2"></td>
+        </tr>
+        <tr>
+            <td><label>Mark3</label></td>
+            <td><input type="number" [(ngModel)]="student.mark3" name="txtmark3"></td>
+        </tr>
+        <tr>
+            <td colspan="2"><button (click)="printInput()">Add</button></td>
+        </tr>
+    </table>
+</form>
