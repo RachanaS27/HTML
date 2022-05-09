@@ -1,0 +1,19 @@
+<p>list works!</p>
+
+
+    <table border="1">
+        <tr>
+            <th>RollNo</th>
+            <th>Name</th>
+            <th>Mark1</th>
+            <th>Mark2</th>
+            <th>Mark3</th>
+        </tr>
+        <tr *ngFor="let s of students">
+            <td>{{s.rollNo}}</td>
+            <td>{{s.name}}</td>
+            <td>{{s.mark1}}</td>
+            <td>{{s.mark2}}</td>
+            <td>{{s.mark3}}</td>
+        </tr>
+    </table>

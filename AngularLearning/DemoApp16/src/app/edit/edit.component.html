@@ -1,0 +1,36 @@
+<p>edit works!</p>
+
+
+{{studForm.value | json}}
+<form [formGroup]="studForm">
+    <table>
+        <tr>
+            <td><label for="">Edit student by RollNo</label></td>
+            <td><input type="text" formControlName="rollNo"></td>
+        </tr>
+        <tr>
+            <td colspan="2"><button type="button" (click)="edit()">Show Student</button></td>
+        </tr>
+        <tr>
+            <td><label>RollNo</label></td>
+            <td><input formControlName="rollNo" type="text" value={{student.rollNo}}></td>
+        </tr>
+        <tr>
+            <td><label>Name</label></td>
+            <td><input formControlName="name" type="text" value={{student.name}}></td>
+        </tr>
+        <tr>
+            <td><label>Mark1</label></td>
+            <td><input formControlName="mark1" type="text" value={{student.mark1}}></td>
+        </tr>
+        <tr>
+            <td><label>Mark2</label></td>
+            <td><input formControlName="mark2" type="text" value={{student.mark2}}></td>
+        </tr>
+        <tr>
+            <td><label>Mark3</label></td>
+            <td><input formControlName="mark3" type="text" value={{student.mark3}}></td>
+        </tr>
+
+    </table>
+</form><button type="button" (click)="update()">Edit</button><br>

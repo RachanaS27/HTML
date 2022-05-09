@@ -1,0 +1,30 @@
+<p>add works!</p>
+
+{{studForm.value | json}}
+<form [formGroup]="studForm">
+    <table>
+        <tr>
+            <td><label>RollNo</label></td>
+            <td><input formControlName="rollNo" type="text"></td>
+        </tr>
+        <tr>
+            <td><label>Name</label></td>
+            <td><input formControlName="name" type="text"></td>
+        </tr>
+        <tr>
+            <td><label>Mark1</label></td>
+            <td><input formControlName="mark1" type="text"></td>
+        </tr>
+        <tr>
+            <td><label>Mark2</label></td>
+            <td><input formControlName="mark2" type="text"></td>
+        </tr>
+        <tr>
+            <td><label>Mark3</label></td>
+            <td><input formControlName="mark3" type="text"></td>
+        </tr>
+        <tr>
+            <td colspan="2"><button type="button" (click)="add()">Add</button></td>
+        </tr>
+    </table>
+</form>
