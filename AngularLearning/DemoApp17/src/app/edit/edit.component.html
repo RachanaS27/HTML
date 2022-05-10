@@ -1,0 +1,43 @@
+<p>edit works!</p>
+
+<form #studentForm="ngForm">
+    {{studentForm.value | json}}
+    <br>
+    {{student.value | json}}
+<table>
+    <tr>
+        <td><label for="">Edit RollNo</label></td>
+        <td><input type="text" [(ngModel)]="student.rollNo" name="rollNo" #inp></td>
+    </tr>
+    <tr>
+        <td colspan="2">
+            <button (click)="edit(inp.value)">Edit</button>
+        </td>
+    </tr>
+    <tr>
+        <td><label for="">RollNo</label></td>
+        <td><input type="text" [(ngModel)]="stud.rollNo" name="rollNo" value={{stud.rollNo}}></td>
+    </tr>
+    <tr>
+        <td><label for="">Name</label></td>
+        <td><input type="text" [(ngModel)]="stud.name" name="name" value={{stud.name}}></td>
+    </tr>
+    <tr>
+        <td><label for="">Mark1</label></td>
+        <td><input type="text" [(ngModel)]="stud.mark1" name="mark1" value={{stud.mark1}}></td>
+    </tr>
+    <tr>
+        <td><label for="">Mark2</label></td>
+        <td><input type="text" [(ngModel)]="stud.mark2" name="mark2" value={{student.mark2}}></td>
+    </tr>
+    <tr>
+        <td><label for="">Mark3</label></td>
+        <td><input type="text" [(ngModel)]="stud.mark3" name="mark3" value={{stud.mark3}}></td>
+    </tr>
+    <tr>
+        <td colspan="2">
+            <button (click)="update()">Update</button>
+        </td>
+    </tr>
+</table>
+</form>

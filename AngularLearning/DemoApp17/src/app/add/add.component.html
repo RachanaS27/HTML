@@ -1,0 +1,34 @@
+<p>add works!</p>
+
+<form #studentForm="ngForm">
+    {{studentForm.value | json}}
+    <br>
+    {{student | json}}
+<table>
+    <tr>
+        <td><label for="">RollNo</label></td>
+        <td><input type="text" [(ngModel)]="student.rollNo" name="txtId"></td>
+    </tr>
+    <tr>
+        <td><label for="">Name</label></td>
+        <td><input type="text" [(ngModel)]="student.name" name="txtName"></td>
+    </tr>
+    <tr>
+        <td><label for="">Mark1</label></td>
+        <td><input type="text" [(ngModel)]="student.mark1" name="txtMark1"></td>
+    </tr>
+    <tr>
+        <td><label for="">Mark2</label></td>
+        <td><input type="text" [(ngModel)]="student.mark2" name="txtMark2"></td>
+    </tr>
+    <tr>
+        <td><label for="">Mark3</label></td>
+        <td><input type="text" [(ngModel)]="student.mark3" name="txtMark3"></td>
+    </tr>
+    <tr>
+        <td colspan="2">
+            <button (click)="add()">Add</button>
+        </td>
+    </tr>
+</table>
+</form>
