@@ -1,0 +1,41 @@
+<p>test3 works!</p>
+{{simpleForm.value|json}}
+<form [formGroup]="simpleForm">
+    <table>
+        <tr>
+            <td><label>Name</label></td>
+            <td><input type="text" formControlName="myName">
+            <div style="color: red" 
+            *ngIf="simpleForm.get('myName').touched && simpleForm.get('myName').invalid">
+                Name is mandatory
+            </div>
+            </td>
+        </tr>
+        <tr>
+            <td><label>Email</label></td>
+            <td><input type="text" formControlName="myEmail">
+            <div style="color: red"
+            *ngIf="simpleForm.get('myEmail').touched && simpleForm.get('myEmail').invalid && simpleForm.get('myEmail').errors?.minlength">
+                Email should contain minimum 5 Characters
+            </div>
+            <div style="color: red"
+            *ngIf="simpleForm.get('myEmail').touched && simpleForm.get('myEmail').invalid && simpleForm.get('myEmail').errors?.maxlength">
+                Email can contain maximum 15 Characters
+            </div>
+            </td>
+        </tr>
+        <tr>
+            <td><label>Salary</label></td>
+            <td><input type="text" formControlName="mySalary">
+            <div style="color: red;"
+            *ngIf="simpleForm.get('mySalary').touched && simpleForm.get('mySalary').invalid && simpleForm.get('mySalary').errors?.min">
+                Salary should not be less than 1000
+            </div>
+            <div style="color: red;"
+            *ngIf="simpleForm.get('mySalary').touched && simpleForm.get('mySalary').invalid && simpleForm.get('mySalary').errors?.max">
+            Salary should not be exceed 5000
+        </div>
+            </td>
+        </tr>
+    </table>
+</form>

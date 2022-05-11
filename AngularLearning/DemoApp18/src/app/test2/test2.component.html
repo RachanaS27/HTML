@@ -1,0 +1,73 @@
+<p>test2 works!</p>
+{{simpleForm.value | json}}
+<form #simpleForm="ngForm">
+    <table>
+        <tr>
+            <td><label for="">RollNo</label></td>
+            <td><input type="text"
+                required
+                name="txtRollNo"
+                [(ngModel)]="rollNo"
+                #roll="ngModel"
+                >
+            <div *ngIf="roll.touched && roll.invalid">
+                Roll Number is mandatory
+            </div>
+            </td>
+        </tr>
+        <tr>
+            <td><label for="">Name</label></td>
+            <td><input 
+                minlength="5"
+                name="txtName"
+                [(ngModel)]="name"
+                #n="ngModel">
+            <div *ngIf="n.touched && n.invalid">
+                Name should be minimum of 5 Characters
+            </div>
+            </td>
+        </tr>
+        <tr>
+            <td><label for="">Mark1</label></td>
+            <td><input type="number"
+                name="txtMark1"
+                min="0" 
+                max="100"
+                [(ngModel)]="mark1"
+                #m1="ngModel"
+                >
+            <div *ngIf="m1.touched && m1.invalid">
+                Marks should lie between 0 to 100
+            </div>
+            </td>
+        </tr>
+        <tr>
+            <td><label for="">Mark2</label></td>
+            <td><input type="number"
+                name="txtMark2"
+                min="0" 
+                max="100"
+                [(ngModel)]="mark2"
+                #m2="ngModel"
+                >
+            <div *ngIf="m2.touched && m2.invalid">
+                Marks should lie between 0 to 100
+            </div>
+            </td>
+        </tr>
+        <tr>
+            <td><label for="">Mark3</label></td>
+            <td><input type="number"
+                name="txtMark3"
+                min="0" 
+                max="100"
+                [(ngModel)]="mark3"
+                #m3="ngModel"
+                >
+            <div *ngIf="m3.touched && m3.invalid">
+                Marks should lie between 0 to 100
+            </div>
+            </td>
+        </tr>
+    </table>
+</form>
