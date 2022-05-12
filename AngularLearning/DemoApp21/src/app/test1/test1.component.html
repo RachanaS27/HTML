@@ -1,0 +1,32 @@
+<p>test1 works!</p>
+{{categoryForm.value|json}}
+<form [formGroup]="categoryForm">
+    <table>
+        <tr>
+            <td><label>Name</label></td>
+            <td><input type="text"
+                formControlName="name">
+            <div style="color: red;"
+            *ngIf="categoryForm.get('name').touched && categoryForm.get('name').invalid && categoryForm.get('name').errors?.minlength">
+                Name should have minimum of 3 Characters
+            </div>
+            <div style="color: red;"
+            *ngIf="categoryForm.get('name').touched && categoryForm.get('name').invalid && categoryForm.get('name').errors?.maxlength">
+                Name should can have maximum of 15 Characters
+            </div>
+            </td>
+        </tr>
+        <tr>
+            <td><label>Description</label></td>
+            <td><input type="text"
+                formControlName="description"></td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <button type="button" (click)="add()">Add</button>
+            </td>
+        </tr>
+    </table>
+</form>
+<br>
+{{categoryResponse|json}}

@@ -1,0 +1,41 @@
+<p>test4 works!</p>
+
+<form [formGroup]="advtForm">
+  <table>
+    <tr>
+      <td><label>Search Advt by User Name</label></td>
+      <td><input type="text" formControlName="name" #inp /></td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <button (click)="find(inp.value)">Find</button>
+      </td>
+    </tr>
+  </table>
+</form>
+
+<table border="1" >
+  <tr>
+    <th>Id</th>
+    <th>Title</th>
+    <th>Price</th>
+    <th>Category</th>
+    <th>Description</th>
+    <th>User Name</th>
+    <th>Created Date</th>
+    <th>Modified Date</th>
+    <th>Status</th>
+  </tr>
+  <tr *ngFor="let a of advertise">
+    <td>{{ a.id }}</td>
+    <td>{{ a.title|titlecase }}</td>
+    <td>{{ a.price |currency:'INR':true:'.2-2'}}</td>
+    <td>{{ a.category |titlecase}}</td>
+    <td>{{ a.description | titlecase }}</td>
+    <td>{{ a.userName|titlecase }}</td>
+    <td>{{ a.createdDate }}</td>
+    <td>{{ a.modifiedDate }}</td>
+    <td [style.backgroundColor]="a.status=='open'? 'green': 'red'">{{ a.status |titlecase }}</td>
+  </tr>
+</table>
+

@@ -1,0 +1,15 @@
+<p>test2 works!</p>
+
+<form [formGroup]="categoryForm">
+    <table>
+        <tr>
+            <td><label>Id</label></td>
+            <td><input type="number" formControlName="id" #inp></td>
+        </tr>
+        <tr>
+            <td colspan="2"><button type="button" (click)="search(inp.value)">Search</button></td>
+        </tr>
+    </table>
+</form>
+
+{{category|json}}

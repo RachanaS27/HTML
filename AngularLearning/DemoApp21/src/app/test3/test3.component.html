@@ -1,0 +1,41 @@
+<p>test3 works!</p>
+
+
+<form [formGroup]="advtForm">
+    <table>
+        <tr>
+            <td><label>Search Advt by Id</label></td>
+            <td><input type="text" formControlName="id" #inp></td>
+        </tr>
+        <tr>
+            <td colspan="2">
+          <button (click)="find(inp.value)">Find</button>  
+        </td>
+        </tr>
+    </table>
+</form>
+
+<table border="1" >
+    <tr>
+        <th>Id</th>
+        <th>Title</th>
+        <th>Price</th>
+        <th>Category</th>
+        <th>Description</th>
+        <th>User Name</th>
+        <th>Created Date</th>
+        <th>Modified Date</th>
+        <th>Status</th>
+      </tr>
+    <tr>
+      <td>{{ advertise.id }}</td>
+      <td>{{ advertise.title |titlecase  }}</td>
+      <td>{{ advertise.price |currency:'INR':true:'.2-2' }}</td>
+      <td>{{ advertise.category |titlecase }}</td>
+      <td>{{ advertise.description |titlecase  }}</td>
+      <td>{{ advertise.userName|titlecase  }}</td>
+      <td>{{ advertise.createdDate }}</td>
+      <td>{{ advertise.modifiedDate }}</td>
+      <td [style.backgroundColor]="advertise.status=='open'? 'green': 'red'">{{ advertise.status |titlecase  }}</td>
+    </tr>
+  </table>
