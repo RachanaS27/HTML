@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { AddComponent } from './add/add.component';
 import { ListComponent } from './list/list.component';
-import { TestComponent } from './add/test.component';
-import { Test2Component } from './remove/test2.component';
+import { RemoveComponent } from './remove/remove.component';
 
 const routes: Routes = [
-  {path:"add",component:TestComponent},
-  {path:"remove",component:Test2Component},
+  {path:"add",component:AddComponent},
+  {path:"remove",component:RemoveComponent},
   {path:"list",component:ListComponent}
 ];
 

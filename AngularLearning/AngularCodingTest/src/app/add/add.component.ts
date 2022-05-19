@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { LoanServiceService } from '../loan-service.service';
+import { CustomLoan } from '../Customloan'
 import { FormControl, FormGroup } from '@angular/forms';
-import { StudentService } from '../student.service';
-
 @Component({
   selector: 'app-add',
   templateUrl: './add.component.html',
@@ -9,22 +9,24 @@ import { StudentService } from '../student.service';
 })
 export class AddComponent implements OnInit {
 
-  constructor(public ss:StudentService) { }
+  constructor(private ls:LoanServiceService) { }
 
-  public studForm=new FormGroup({
+
+  ngOnInit() {
+  }
+
+
+  public customerForm=new FormGroup({
     loanId:new FormControl(),
     customerName:new FormControl(),
     loanAmount:new FormControl(0),
-    dateOfLoan:new FormControl(),
+    dateOfLoan:new FormControl(new Date()),
     tenure:new FormControl(0),
     rateOfInterest:new FormControl(0)
   });
 
   add(){
-    this.ss.addStudent(this.studForm.value);
-    console.log(this.studForm.value)
+    console.log(this.customerForm.value)
+    this.ls.addLoan(this.customerForm.value);
   }
-  ngOnInit() {
-  }
-
 }
